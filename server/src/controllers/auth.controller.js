@@ -23,6 +23,15 @@ export const signInCtrl = async (req, res) => {
 
 export const signUpCtrl = async (req, res) => {
   try {
+    const { username, password, email } = req.body;
+
+    const user = await createUser(username, password, email);
+
+    if(!user){
+      return res.status(401).json({ message: "Invalid credentials"})
+    }
+
+    res.status(200).json({ user });
     // ! Completar la función signUpCtrl
   } catch (error) {
     res.status(500).json({ message: error.message });

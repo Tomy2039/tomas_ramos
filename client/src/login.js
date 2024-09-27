@@ -7,7 +7,7 @@ const $form = document.getElementById("login-form");
 $form.addEventListener("submit", async (e) => {
   // Evitar que el formulario recargue la página
   e.preventDefault();
-
+  
   // Crear un objeto FormData con los datos del formulario
   const formData = new FormData($form);
 
@@ -25,6 +25,7 @@ $form.addEventListener("submit", async (e) => {
     if (response.ok) {
       // ! REDIRIGIR AL USUARIO A LA PÁGINA PRINCIPAL
     } else {
+      alert("error al iniciar sesion");
       // ! MOSTRAR UN MENSAJE DE ERROR AL USUARIO
     }
   });
