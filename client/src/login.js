@@ -24,6 +24,7 @@ $form.addEventListener("submit", async (e) => {
   }).then((response) => {
     if (response.ok) {
       // ! REDIRIGIR AL USUARIO A LA PÁGINA PRINCIPAL
+      
     } else {
       alert("error al iniciar sesion");
       // ! MOSTRAR UN MENSAJE DE ERROR AL USUARIO
